@@ -1,0 +1,26 @@
+{
+  "name": "exploring-interpreter-protocol",
+  "version": "0.0.2",
+  "main": "lib/eipImpl.js",
+  "types": "lib/eipImpl.d.ts",
+  "devDependencies": {
+    "@types/core-js": "^2.5.4",
+    "ts-loader": "^9.2.3",
+    "typescript": "^4.3.5",
+    "webpack-cli": "^4.7.2"
+  },
+  "dependencies": {
+    "socket.io-client": "^4.1.3",
+    "webpack": "^5.44.0",
+    "node-pty": "^0.10.0",
+    "socket.io": "^3.1.2"
+  },
+  "scripts": {
+    "build": "tsc",
+    "pack":  "npm run build && cp package.json ./dist/ && cd ./dist/ && npm pack"
+  },
+  "files": [
+    "*.ts",
+    "*.js"
+  ]
+}
